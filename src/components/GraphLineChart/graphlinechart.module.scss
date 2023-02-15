@@ -1,0 +1,42 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.linechart {
+  width: 258px;
+  height: 263px;
+  &:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    transition-duration: 200ms;
+  }
+  &__container {
+    background-color: $primaryColor;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 176px;
+  }
+  &__title {
+    position: absolute;
+    z-index: 10;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    width: 150px;
+    text-align: left;
+    margin: 0 0 0 2rem;
+    padding: 2rem 0 0 0;
+  }
+  & .recharts-text {
+    color: #fff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
+.recharts-layer.recharts-line + .recharts-curve.recharts-line-curve {
+  width: 258px !important;
+}

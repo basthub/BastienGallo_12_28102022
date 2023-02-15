@@ -1,0 +1,37 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.barchart {
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    background: $secondaryLightColor;
+    border-radius: 10px;
+    &:hover {
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+      transition-duration: 200ms;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.recharts {
+  &-tooltip-wrapper:active:hover
+    + .recharts-tooltip-wrapper-left
+    + .recharts-tooltip-wrapper-top {
+    outline: none;
+    border: none;
+  }
+  &-default-legend {
+    margin-top: 6px;
+    padding-right: 6px;
+  }
+}

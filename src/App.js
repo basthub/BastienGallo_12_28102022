@@ -1,23 +1,18 @@
-import './App.scss';
+import './App.scss'
+import AppRouter from './router/router'
+import Header from './components/Header/Header'
+import Sidenav from './components/Sidenav/Sidenav'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main className="main">
+        <Sidenav />
+        <AppRouter />
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
