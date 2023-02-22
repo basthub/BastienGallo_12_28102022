@@ -1,5 +1,9 @@
-import styles from './header.module.scss'
+import './header.module.scss'
 import logo from '../../assets/logo.png'
+/**
+ * Return main navigation
+ * @returns React component
+ */
 
 const Header = () => {
   return (

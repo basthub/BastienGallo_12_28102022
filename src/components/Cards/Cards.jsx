@@ -4,7 +4,11 @@ import iconburger from '../../assets/iconburger.svg'
 import iconchicken from '../../assets/iconchicken.svg'
 import iconfire from '../../assets/iconfire.svg'
 import PropTypes from 'prop-types'
-
+/**
+ * @param type - type of nutrient
+ * @param value -  value of nutrient
+ * @returns a div with icon, unit, and type of nutrient
+ */
 const Cards = ({ value, type }) => {
   let icon,
     unitOfMeasurement,

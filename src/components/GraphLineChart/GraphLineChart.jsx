@@ -10,11 +10,16 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
+/**
+ * Rechart Linechart component
+ * @param data -  Contain datas from the Api about user average sessions
+ * @returns React element
+ */
+
 const GraphLineChart = (data) => {
   function handleFormatTick(numDay) {
     const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
-    // eslint-disable-next-line default-case
     switch (numDay) {
       case 1:
         return days[0]
@@ -30,6 +35,8 @@ const GraphLineChart = (data) => {
         return days[5]
       case 7:
         return days[6]
+      default:
+        return
     }
   }
 
@@ -57,12 +64,17 @@ const GraphLineChart = (data) => {
             stroke={'#FFF'}
             strokeWidth={2}
           />
-          <YAxis hide padding={{ top: 70, bottom: 0 }} />
+          <YAxis hide padding={{ top: 70, bottom: 20 }} />
           <XAxis
             dataKey="day"
             tickFormatter={handleFormatTick}
             axisLine={false}
             tickLine={false}
+            tick={{
+              fill: 'rgba(255,255,255,0.6)',
+              fontWeight: '500',
+              fontSize: '12px',
+            }}
             padding={{ right: 20, left: 20 }}
             stroke={'#fff'}
             interval={'preserveStartEnd'}
@@ -73,6 +85,10 @@ const GraphLineChart = (data) => {
               color: '#000',
               width: '39px',
               height: '25px',
+              border: 'none',
+              outline: 'none',
+              textAlign: 'center',
+              lineHeight: '1.5',
             }}
             stroke={'#FFF'}
             dataKey="sessionLength"
@@ -83,13 +99,13 @@ const GraphLineChart = (data) => {
     </div>
   )
 }
+
 GraphLineChart.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      day: PropTypes.number.isRequired,
-      sessionLength: PropTypes.number.isRequired,
-    }).isRequired
-  ).isRequired,
+      numDay: PropTypes.number,
+      sessionLength: PropTypes.number,
+    })
+  ),
 }
-
 export default GraphLineChart

@@ -3,6 +3,10 @@ import iconmeditate from '../../assets/iconmeditate.svg'
 import iconswim from '../../assets/iconswim.svg'
 import iconbicycle from '../../assets/iconbicycle.svg'
 import iconweight from '../../assets/iconweight.svg'
+/**
+ * Return a div with a vertical nav and copyright
+ * @returns React component 
+ */
 const Sidenav = () => {
   return (
     <div className={styles.sidebar}>

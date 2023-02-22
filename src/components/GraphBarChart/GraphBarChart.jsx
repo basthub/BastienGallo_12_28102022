@@ -12,6 +12,11 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
+/**
+ * Rechart Barchart component
+ * @param data -  Contain datas from the Api about user activity
+ * @returns React element
+ */
 const GraphBarChart = ({ data }) => {
   return (
     <div className={styles.barchart__container}>
@@ -54,8 +59,8 @@ const GraphBarChart = ({ data }) => {
               background: 'red',
               border: 'none',
               outline: 'none',
-              width: '50px',
-              height: '70px',
+              width: '39px',
+              height: '63px',
               textAlign: 'center',
               lineHeight: '1.5',
             }}

@@ -1,6 +1,11 @@
 import styles from './customtooltip.module.scss'
 import PropTypes from 'prop-types'
 
+/**
+ * Rechart customizable tooltip used in the Linechart and Barchart component
+ * @param payload data from the barchart/linechart when active (mouse over)
+ * @returns   Payload properties of each componant 
+ */
 const labelInTooltip = (payload) => {
   if (typeof payload[0].unit !== 'undefined') {
     return (

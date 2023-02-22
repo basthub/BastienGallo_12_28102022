@@ -8,11 +8,6 @@
     height: 320px;
     background: $secondaryLightColor;
     border-radius: 10px;
-    &:hover {
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-      transform: scale(1.02);
-      transition-duration: 200ms;
-    }
   }
   &__title {
     position: absolute;

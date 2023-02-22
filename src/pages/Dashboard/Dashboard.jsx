@@ -72,7 +72,7 @@ const Dashboard = () => {
               </div>
               <div className={styles.otherchart}>
                 <GraphLineChart data={getAverageSessionsData.sessions} />
-                <GraphRadarChart data={getPerformanceData.data} />
+                <GraphRadarChart data={getPerformanceData} />
                 <GraphRadialBarChart
                   data={getUserData.todayScore || getUserData.score}
                 />

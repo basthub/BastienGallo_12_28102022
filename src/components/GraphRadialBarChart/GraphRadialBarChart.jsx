@@ -2,6 +2,12 @@ import styles from './graphradialbarchart.module.scss'
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts'
 import PropTypes from 'prop-types'
 
+/**
+ * Rechart Radialchart component
+ * @param data -  Contain datas from the Api about user today score
+ * @returns React element
+ */
+
 const GraphRadialBarChart = ({ data }) => {
   const datas = []
   datas.push(data)
