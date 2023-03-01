@@ -43,11 +43,7 @@ const GraphLineChart = (data) => {
   return (
     <div className={styles.linechart}>
       <p className={styles.linechart__title}>Durée moyenne des sessions</p>
-      <ResponsiveContainer
-        width="100%"
-        height={263}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-      >
+      <ResponsiveContainer margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
         <LineChart
           data={data.data}
           style={{ background: 'red', borderRadius: '10px' }}

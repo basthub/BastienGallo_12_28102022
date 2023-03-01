@@ -4,7 +4,7 @@
 .linechart {
   width: 258px;
   height: 263px;
-  
+
   &__container {
     background-color: $primaryColor;
     position: relative;
@@ -35,4 +35,17 @@
 }
 .recharts-layer.recharts-line + .recharts-curve.recharts-line-curve {
   width: 258px !important;
+}
+
+@include largeBreakPoint {
+  .linechart {
+    width: 224px;
+    height: 220px;
+  }
+}
+@include mediumBreakPoint {
+  .linechart {
+    width: 210px;
+    height: 210px;
+  }
 }

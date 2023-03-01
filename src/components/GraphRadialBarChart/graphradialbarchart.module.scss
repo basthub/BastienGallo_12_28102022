@@ -7,7 +7,7 @@
   background-color: #f8f8f8;
   border-radius: 10px;
   position: relative;
-  min-width: 210px;
+  min-width: 184px;
 
   &__title {
     margin: 0;
@@ -41,6 +41,26 @@
       font-weight: bold;
       width: 50%;
       color: #74798c;
+    }
+  }
+}
+@include largeBreakPoint {
+  .radialchart {
+    width: 224px;
+    height: 220px;
+    &__bloc-score {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+@include mediumBreakPoint {
+  .radialchart {
+    width: 210px;
+    height: 210px;
+    &__bloc-score {
+      width: 120px;
+      height: 120px;
     }
   }
 }

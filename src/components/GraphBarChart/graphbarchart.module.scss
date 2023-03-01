@@ -30,3 +30,13 @@
     padding-right: 6px;
   }
 }
+@include largeBreakPoint {
+  .barchart__container {
+    height: 272px;
+  }
+}
+@include mediumBreakPoint {
+  .barchart__container {
+    height: 225px;
+  }
+}

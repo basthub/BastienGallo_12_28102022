@@ -1,1 +1,20 @@
 @import './variables';
+
+//Breakpoints
+@mixin smallBreakPoint {
+  @media (max-width: #{$screen-small}) {
+    @content;
+  }
+}
+
+@mixin mediumBreakPoint {
+  @media (max-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin largeBreakPoint {
+  @media (max-width: #{$screen-large}) {
+    @content;
+  }
+}

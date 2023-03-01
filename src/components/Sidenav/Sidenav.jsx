@@ -5,7 +5,7 @@ import iconbicycle from '../../assets/iconbicycle.svg'
 import iconweight from '../../assets/iconweight.svg'
 /**
  * Return a div with a vertical nav and copyright
- * @returns React component 
+ * @returns React component
  */
 const Sidenav = () => {
   return (

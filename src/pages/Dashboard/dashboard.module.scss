@@ -5,45 +5,42 @@ main {
 }
 .dashboard {
   width: 100%;
-  padding-left: 110px;
+  padding-left: 5%;
+  margin-bottom: 8%;
   h1 {
     font-size: 48px;
     font-weight: 500;
-    margin: 68px 0 40px 0;
+    margin: 5% 0 3% 0;
     span {
       color: $textAlternativeColor;
       font-size: 48px;
     }
   }
   .subtitle {
-    margin: 0 0 77px 0;
+    margin: 0 0 5% 0;
   }
   .userInfos {
     display: flex;
     justify-content: flex-start;
-    gap: 2rem;
-    padding-right: 2rem;
+    max-height: 612px;
   }
   .graphContainer {
     display: flex;
-    min-width: 675px;
+    min-width: 590px;
     max-width: 835px;
-    width: 100%;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
   }
   .mainchart {
-    padding-bottom: 100px;
+    gap: 2rem;
     max-height: 320px;
   }
   .otherchart {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
     max-height: 263px;
-    min-width: 675px;
-    padding-top: 30px;
+    margin-top: 2%;
   }
   .nutritionData {
     display: flex;
@@ -51,6 +48,30 @@ main {
     flex-direction: column;
     align-items: flex-end;
     margin: 0;
-    height: 100%;
+    padding-left: 2%;
+  }
+}
+
+@include largeBreakPoint {
+  .userInfos {
+    height: 510px;
+  }
+  .graphContainer {
+    width: 695px;
+  }
+  .otherchart {
+    gap: 1rem;
+  }
+}
+@include mediumBreakPoint {
+  .dashboard {
+    padding-left: 3%;
+  }
+
+  .userInfos {
+    height: 466px;
+  }
+  .graphContainer {
+    width: 662px;
   }
 }

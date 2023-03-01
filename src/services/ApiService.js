@@ -17,9 +17,9 @@ export const getUserMainData = async (id) => {
       throw new Error('Something went wrong')
     }
   } catch (error) {
-    if (error.response && error.response.status === 404) {
+    if ((await error.response) && error.response.status === 404) {
       throw error
-    } else if (error.request) {
+    } else if (await error.request) {
       throw error
     } else {
       console.log(error.message)
