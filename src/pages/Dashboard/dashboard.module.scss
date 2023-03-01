@@ -1,0 +1,56 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+main {
+  display: flex;
+}
+.dashboard {
+  width: 100%;
+  padding-left: 110px;
+  h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 68px 0 40px 0;
+    span {
+      color: $textAlternativeColor;
+      font-size: 48px;
+    }
+  }
+  .subtitle {
+    margin: 0 0 77px 0;
+  }
+  .userInfos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-right: 2rem;
+  }
+  .graphContainer {
+    display: flex;
+    min-width: 675px;
+    max-width: 835px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mainchart {
+    padding-bottom: 100px;
+    max-height: 320px;
+  }
+  .otherchart {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-height: 263px;
+    min-width: 675px;
+    padding-top: 30px;
+  }
+  .nutritionData {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    height: 100%;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.radarchart {
+  width: 258px;
+  height: 263px;
+
+  background: #000;
+  border-radius: 10px;
+}

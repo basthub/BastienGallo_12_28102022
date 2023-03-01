@@ -1,0 +1,12 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.customtooltip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  border: none;
+  font-size: 8px;
+}
