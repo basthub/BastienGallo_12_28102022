@@ -17,6 +17,7 @@ const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [isUserData, setIsUserData] = useState(false)
   const [error, setError] = useState(false)
+  const [serverError, setServerError] = useState(false)
   const [getUserData, setGetUserData] = useState(null)
   const [getActivityData, setGetActivityData] = useState(null)
   const [getAverageSessionsData, setGetAverageSessionsData] = useState(null)
@@ -40,12 +41,19 @@ const Dashboard = () => {
           setIsUserData(true)
         })
         .catch((error) => {
-          console.log(error)
-          setError(true)
-          setIsUserData(false)
+          if (error.response && error.response.status === 404) {
+            setError(true)
+            setIsUserData(false)
+          } else if (error.request) {
+            setServerError(true)
+            setIsUserData(false)
+          } else {
+            setServerError(true)
+            setIsUserData(false)
+          }
         })
     }
-  }, [])
+  }, [userId])
 
   useEffect(() => {
     setIsLoading(!(!error && isUserData))
@@ -53,8 +61,14 @@ const Dashboard = () => {
 
   return (
     <div className={styles.dashboard}>
-      {error ? (
-        <p>Cet utilisateur n'existe pas</p>
+      {serverError ? (
+        <p>
+          {' '}
+          Oops, une erreur est survenue. Nous ne pouvons pas accéder aux données
+          pour le moment. Veuillez réessayer plus tard.
+        </p>
+      ) : error ? (
+        <p>Désolé, l'utilisateur que vous avez demandé n'existe pas.</p>
       ) : isLoading ? (
         <p> Chargement...</p>
       ) : (

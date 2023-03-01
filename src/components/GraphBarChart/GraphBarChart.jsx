@@ -18,6 +18,9 @@ import PropTypes from 'prop-types'
  * @returns React element
  */
 const GraphBarChart = ({ data }) => {
+  function formatDateTick(day) {
+    return Number(day.slice(8))
+  }
   return (
     <div className={styles.barchart__container}>
       <p className={styles.barchart__title}>Activité quotidienne</p>
@@ -38,6 +41,7 @@ const GraphBarChart = ({ data }) => {
             axisLine={false}
             domain={['dataMin + 1', 'dataMax + 1']}
             tickLine={false}
+            tickFormatter={formatDateTick}
           />
           <YAxis
             orientation="right"

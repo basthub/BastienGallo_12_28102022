@@ -50,7 +50,7 @@ const GraphRadialBarChart = ({ data }) => {
   )
 }
 
-GraphRadialBarChart.propTyoes = {
+GraphRadialBarChart.propTypes = {
   todaySccore: PropTypes.number,
 }
 export default GraphRadialBarChart

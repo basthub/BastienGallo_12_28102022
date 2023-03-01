@@ -3,25 +3,39 @@ import axios from 'axios'
 const apiUrl = `${process.env.REACT_APP_API_URL}`
 
 /**
- * 
- * @param {Number} id - User id 
+ *
+ * @param {Number} id - User id
  * @returns {Promise} Return user datas
  */
 
 export const getUserMainData = async (id) => {
   try {
     const response = await axios.get(`${apiUrl}/user/${id}`)
-    console.log('je passe là')
-    return response.data.data
+    if (response.status === 200) {
+      return response.data.data
+    } else {
+      throw new Error('Something went wrong')
+    }
   } catch (error) {
-    console.log(error)
+    if (error.response && error.response.status === 404) {
+      throw error
+    } else if (error.request) {
+      throw error
+    } else {
+      console.log(error.message)
+    }
+    throw error
   }
 }
 
 export const getUserActivity = async (id) => {
   try {
     const response = await axios.get(`${apiUrl}/user/${id}/activity`)
-    return response.data.data
+    if (response.status === 200) {
+      return response.data.data
+    } else {
+      throw new Error('Something went wrong')
+    }
   } catch (error) {
     throw new Error({ message: error })
   }
@@ -30,7 +44,11 @@ export const getUserActivity = async (id) => {
 export const getUserAverageSessions = async (id) => {
   try {
     const response = await axios.get(`${apiUrl}/user/${id}/average-sessions`)
-    return response.data.data
+    if (response.status === 200) {
+      return response.data.data
+    } else {
+      throw new Error('Something went wrong')
+    }
   } catch (error) {
     throw new Error({ message: error })
   }
@@ -39,7 +57,11 @@ export const getUserAverageSessions = async (id) => {
 export const getUserPerformance = async (id) => {
   try {
     const response = await axios.get(`${apiUrl}/user/${id}/performance`)
-    return response.data.data
+    if (response.status === 200) {
+      return response.data.data
+    } else {
+      throw new Error('Something went wrong')
+    }
   } catch (error) {
     throw new Error({ message: error })
   }
