@@ -6,6 +6,7 @@
   width: 117px;
   background-color: $secondaryDark2Color;
   gap: 107px;
+  min-height: 689px;
 
   > aside {
     color: $textLight2Color;
@@ -13,8 +14,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 164px;
+    justify-content: space-evenly;
+    gap: 100px;
     > p {
       transform: rotate(270deg);
       text-align: right;

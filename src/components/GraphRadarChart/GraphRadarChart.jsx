@@ -47,8 +47,8 @@ const GraphRadarChart = ({ data }) => {
   const datas = reformatData(data)
   return (
     <div className={styles.radarchart}>
-      <ResponsiveContainer width={'100%'} height={263}>
-        <RadarChart outerRadius={75} data={datas}>
+      <ResponsiveContainer>
+        <RadarChart outerRadius={64} data={datas}>
           <PolarGrid strokeWidth={1} stroke="white" radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
@@ -58,7 +58,7 @@ const GraphRadarChart = ({ data }) => {
             stroke={'#fff'}
             tickLine={false}
             radius={10}
-            fontSize={12}
+            fontSize={11}
             strokeWidth={1}
           />
           <Radar dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
